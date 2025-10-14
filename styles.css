@@ -1,0 +1,160 @@
+:root {
+    --vermelho: #e50914;
+    --cinza-escuro: #1a1a1a;
+    --cinza-medio: #222;
+    --texto-claro: #f4f4f4;
+    --texto-suave: #ccc;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #111;
+    color: var(--texto-claro);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cinza-medio);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--vermelho);
+}
+
+header h1 {
+    color: var(--vermelho);
+    font-size: 2.2em;
+    margin: 0;
+}
+
+nav {
+    background-color: var(--cinza-escuro);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+nav a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--texto-claro);
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--vermelho);
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--cinza-escuro);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+section,
+article {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: var(--vermelho);
+    border-left: 5px solid var(--vermelho);
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* === Personagens === */
+.personagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.personagem {
+    background-color: var(--cinza-medio);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.personagem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--vermelho);
+}
+
+.personagem img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.personagem h3 {
+    color: var(--vermelho);
+    margin: 10px 0 5px;
+}
+
+/* === Galeria === */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+figure {
+    background-color: var(--cinza-medio);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 0 5px #000;
+}
+
+figure:hover {
+    transform: scale(1.03);
+}
+
+figure img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: var(--texto-suave);
+    padding: 10px;
+    text-align: center;
+}
+
+/* === Rodapé === */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--cinza-medio);
+    border-top: 3px solid var(--vermelho);
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+/* === Botão topo === */
+#topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--vermelho);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 0 10px #000;
+}
